@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.man{
+				width: 100%;
+				
+				position: absolute;
+				animation-name: run;
+				animation-duration: 15s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+				top: 5%;
+				left: 5%;
+			}
+			
+			@-webkit-keyframes run{
+				from{-webkit-transform: translateX(-15%);}
+				to{-webkit-transform: translateX(115%);}
+			}
+			
+			
+			
+			.torso{
+				-webkit-animation-name: torso;
+				-webkit-animation-duration: 5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+				position: relative;
+				top: 100px;
+				left:0;
+				
+			}
+			
+			@-webkit-keyframes torso{
+				from{-webkit-transform:   rotate(5deg) translate( 5px,   0px);}
+				25%{ -webkit-transform:  rotate(5deg) translate(-5px, -14px); }
+				50%{ -webkit-transform:  rotate(5deg) translate( 5px,   0px); }
+				75%{ -webkit-transform:  rotate(5deg) translate(-5px, -14px); }
+				to{ -webkit-transform: rotate(5deg) translate( 5px,   0px); }
+			}
+			
+			
+			.right-bicep{
+				position: absolute;
+				top: 105px;
+				left: 10px;
+				-webkit-transform-origin: top right;
+				-webkit-animation-name: right-bicep;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes right-bicep{
+				from{-webkit-transform: rotate(26deg) translate( 5px,   0px);}
+				50%{-webkit-transform: rotate(-20deg)  translate(-5px, -14px);}
+				to{-webkit-transform: rotate(26deg) translate( 5px,   0px);}
+			}
+			
+			
+			.left-thigh{
+				position: absolute;
+				top: 252px;
+				left: 0px;
+				z-index: -2;
+				-webkit-transform-origin: top center;
+				-webkit-animation-name: left-thigh;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes left-thigh{
+				from{-webkit-transform: rotate(10deg) translate( 5px,   0px);}
+				50%{-webkit-transform: rotate(-45deg)  translate(-5px, -14px);}
+				to{-webkit-transform: rotate(10deg) translate( 5px,   0px);}
+			}
+			
+			.left-shin{
+				position: absolute;
+				top: 120px;
+				left: 10px;
+				z-index: -2;
+				-webkit-transform-origin: top center;
+				-webkit-animation-name: left-shin;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes left-shin{
+				from{-webkit-transform:   rotate(20deg) translate( 5px,   0px);}
+				25%{ -webkit-transform:  rotate(85deg) translate(-5px, -14px); }
+				50%{ -webkit-transform:  rotate(30deg) translate( 5px,   0px); }
+				75%{ -webkit-transform:  rotate(20deg) translate(-5px, -14px); }
+				to{ -webkit-transform: rotate(20deg) translate( 5px,   0px); }
+			}
+			
+			.left-foot{
+				position: absolute;
+				top: 150px;
+				left: 0px;
+				-webkit-transform-origin: top ;
+				-webkit-animation-name: left-foot;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes left-foot{
+				from{-webkit-transform:   rotate(-16deg) /*translate( 5px,   0px)*/;}
+				25%{ -webkit-transform:  rotate(-10deg) /*translate(-5px, -14px)*/; }
+				50%{ -webkit-transform:  rotate(-5deg) /*translate( 5px,   0px)*/; }
+				75%{ -webkit-transform:  rotate(-7deg) /*translate(-5px, -14px)*/; }
+				to{ -webkit-transform: rotate(-16deg) /*translate( 5px,   0px)*/; }
+			}
+			
+			.left-toes{
+				position: absolute;
+				top: 9px;
+				left: 63px;
+				-webkit-transform-origin: left center;
+				-webkit-animation-name: left-toes;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes left-toes{
+				from{-webkit-transform:   rotate(-10deg) /*translate( 5px,   0px)*/;}
+				25%{ -webkit-transform:  rotate(-25deg) /*translate(-5px, -14px)*/; }
+				50%{ -webkit-transform:  rotate(-0deg) /*translate( 5px,   0px)*/; }
+				75%{ -webkit-transform:  rotate(-10deg) /*translate(-5px, -14px)*/; }
+				to{ -webkit-transform: rotate(-10deg) /*translate( 5px,   0px)*/; }
+			}
+			
+			
+			.right-for{
+				position: absolute;
+				top: 110px;
+				left: 14px;
+				-webkit-transform-origin:10px 5px;
+				-webkit-animation-name: right-for;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes right-for{
+				from{-webkit-transform: rotate(-10deg) /*translate( 5px,   0px)*/;}
+				50%{-webkit-transform: rotate(-45deg) /*translate(-5px, -14px)*/;}
+				to{-webkit-transform: rotate(-10deg) /*translate( 5px,   0px)*/;}
+			}
+			
+			.left-bicep{
+				position: absolute;
+				top: 100px;
+				left: 10px;
+				z-index: -4;
+				-webkit-transform-origin: top right;
+				-webkit-animation-name: left-bicep;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes left-bicep{
+				from{-webkit-transform: rotate(-20deg) translate( 5px,   0px);}
+				50%{-webkit-transform: rotate(26deg)  translate(-5px, -14px);}
+				to{-webkit-transform: rotate(-20deg) translate( 5px,   0px);}
+			}
+			
+			.left-for{
+				position: absolute;
+				top: 113px;
+				left: 11px;
+				z-index: -4;
+				-webkit-transform-origin:top left;
+				-webkit-animation-name: left-for;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes left-for{
+				from{-webkit-transform: rotate(-45deg) /*translate( 5px,   0px)*/;}
+				50%{-webkit-transform: rotate(-10deg) /*translate(-5px, -14px)*/;}
+				to{-webkit-transform: rotate(-45deg) /*translate( 5px,   0px)*/;}
+			}
+			
+			
+			.shadow{
+				position: absolute;
+				top: 0px;
+				left: -50px;
+			}
+			
+			.right-thigh{
+				position: absolute;
+				top: 252px;
+				left: 0px;
+				z-index: -1;
+				-webkit-transform-origin: top center;
+				-webkit-animation-name: right-thigh;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes right-thigh{
+				from{-webkit-transform: rotate(-45deg) /*translate( 5px,   0px)*/;}
+				50%{-webkit-transform: rotate(10deg)  /*translate(-5px, -14px)*/;}
+				to{-webkit-transform: rotate(-45deg) /*translate( 5px,   0px)*/;}
+			}
+			
+			.right-shin{
+				position: absolute;
+				top: 123px;
+				left: 5px;
+				z-index: -1;
+				-webkit-transform-origin: top center;
+				-webkit-animation-name: right-shin;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes right-shin{
+				from{-webkit-transform:   rotate(30deg) translate( 5px,   0px);}
+				25%{ -webkit-transform:  rotate(20deg) translate(-5px, -14px); }
+				50%{ -webkit-transform:  rotate(20deg) translate( 5px,   0px); }
+				75%{ -webkit-transform:  rotate(85deg) translate(-5px, -14px); }
+				to{ -webkit-transform: rotate(30deg) translate( 5px,   0px); }
+			}
+			
+			.right-foot{
+				position: absolute;
+				top: 150px;
+				left: 0px;
+				-webkit-transform-origin: top center ;
+				-webkit-animation-name: right-foot;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes right-foot{
+				from{-webkit-transform:   rotate(-5deg);}
+				25%{ -webkit-transform:  rotate(-7deg) ; }
+				50%{ -webkit-transform:  rotate(-16deg); }
+				75%{ -webkit-transform:  rotate(-10deg); }
+				to{ -webkit-transform: rotate(-5deg); }
+			}
+			
+			.right-toes{
+				position: absolute;
+				top: 9px;
+				left: 63px;
+				-webkit-transform-origin:left center;
+				-webkit-animation-name: left-toes;
+				-webkit-animation-duration: 2.5s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes right-toes{
+				from{-webkit-transform:   rotate(-0deg) /*translate( 5px,   0px)*/;}
+				25%{ -webkit-transform:  rotate(-10deg) /*translate(-5px, -14px)*/; }
+				50%{ -webkit-transform:  rotate(-10deg) /*translate( 5px,   0px)*/; }
+				75%{ -webkit-transform:  rotate(-25deg) /*translate(-5px, -14px)*/; }
+				to{ -webkit-transform: rotate(-0deg) /*translate( 5px,   0px)*/; }
+			}
+			
+			.sou{
+				width: 600px;
+				height: 300px;
+				border-radius: 50%;
+				background-color: white;
+				border-bottom: 300px solid black;
+				position: absolute;
+				box-shadow: 0 0 15px black;
+				top: 10%;
+				left:-20%;
+				-webkit-transform: rotateX(80deg);
+				/*perspective: 800px;*/
+				z-index: -10;
+				position: absolute;
+				-webkit-animation-name: taiji;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-timing-function: linear;
+			}
+			
+			@-webkit-keyframes taiji{
+				from{
+					-webkit-transform: rotateZ(0);
+				}
+				to{
+					-webkit-transform: rotateZ(360deg);
+					
+				}
+			}
+			
+			.sou:after{
+				content: "";
+				display: block;
+				box-sizing: border-box;
+				/*-webkit-transform: rotateX(80deg);*/
+				/*perspective: 800px;*/
+				width: 300px;
+				height: 300px;
+				border: 115px solid black;
+				background-color: white;
+				border-radius: 50%;
+				position: absolute;
+				top: 150px;
+				left: 0;
+			}
+			
+			
+			.sou:before{
+				content: "";
+				display: block;
+				box-sizing: border-box;
+				/*-webkit-transform: rotateX(80deg);*/
+				/*perspective: 800px;*/
+				width: 300px;
+				height: 300px;
+				border: 115px solid white;
+				background-color: black;
+				border-radius: 50%;
+				position: absolute;
+				top: 150px;
+				left: 300px;
+				
+			}
+		</style>
+		
+		
+	</head>
+	<body <!--style="background-color:darkgreen-->;">
+		
+		<div class="man">
+			<div class="torso">
+				<img src="img/torso.png" />
+				<div class="right-bicep">
+					<img src="img/right-bicep.png" />
+					<div class="right-for"><img src="img/right-forearm.png" /></div>
+				</div>
+				<div class="left-bicep">
+					<img src="img/left-bicep.png" />
+					<div class="left-for"><img src="img/left-forearm.png" /></div>
+				</div>
+				<div class="left-thigh">
+					<img src="img/left-thigh.png" />
+					<div class="left-shin">
+						<img src="img/shin.png" />
+						<div class="left-foot">
+							<img src="img/foot.png" />
+							<div class="left-toes"><img src="img/toes.png" /></div>
+							<div class="shadow"><img src="img/shadow.png" /></div>
+						</div>
+
+					</div>
+					
+				</div>
+				<div class="right-thigh">
+					<img src="img/left-thigh.png" />
+					<div class="right-shin">
+						<img src="img/shin.png" />
+						<div class="right-foot">
+							<img src="img/foot.png" />
+							<div class="right-toes"><img src="img/toes.png" /></div>
+							<div class="shadow"><img src="img/shadow.png" /></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sou"></div>
+		</div>
+		
+		
+		
+	</body>
+</html>
